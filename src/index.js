@@ -1,5 +1,4 @@
-//import Twitter from 'twitter';
-//import { TwitterApi } from 'twitter-api-v2';
+
 
 import express from 'express';
 import cors from "cors";
@@ -16,7 +15,7 @@ import scheduleRouter from './routes/schedule.router.js';
 
 
 app.set("port", process.env.PORT || 3001);
-app.use(cors({ credentials: true, origin: 'https://client-production-41d8.up.railway.app/' }));
+app.use(cors({ credentials: true, origin: 'https://client-production-41d8.up.railway.app/user/' }));
 app.use(morgan('dev'));
 app.use(express.json());
 
@@ -37,20 +36,3 @@ app.listen(app.get("port"), () => {
     console.log("Server running on port", app.get("port"));
 });
 
-/*
-const client = new Twitter({
-    consumer_key: process.env.CONSUMER_KEY,
-    consumer_secret: process.env.CONSUMER_SECRET,
-    access_token_key: process.env.ACCESS_TOKEN_KEY,
-    access_token_secret: process.env.ACCESS_TOKEN_SECRET
-})
-
-const tweet1 = async () => {
-    try {
-        await client.v2.tweet("First post from my app with Node.js!");
-    } catch (error) {
-        console.log(error)
-    }
-}
-*/
-//tweet1();
