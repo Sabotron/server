@@ -15,7 +15,7 @@ import scheduleRouter from './routes/schedule.router.js';
 
 
 app.set("port", process.env.PORT || 3001);
-app.use(cors({ credentials: true, origin: 'https://client-production-41d8.up.railway.app/user/' }));
+app.use(cors({ credentials: true, origin: '*' }));
 app.use(morgan('dev'));
 app.use(express.json());
 
