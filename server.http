@@ -1,0 +1,36 @@
+### 
+GET http://localhost:3001/user HTTP/1.1
+
+### 
+GET http://localhost:3001/user/3 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:3001/user HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "Tito",
+    "email": "perro@gmail.com",
+    "password": "perro_password" 
+}
+
+###
+DELETE http://localhost:3001/user/1 HTTP/1.1
+
+###
+PATCH  http://localhost:3001/user/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "hanzel",
+    "email": "hanz@hotmail.com",
+    "password": "wrong_password" 
+}
+
+
+### 
+GET http://localhost:3001/post/5 HTTP/1.1
+
+
+
