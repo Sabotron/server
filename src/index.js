@@ -14,14 +14,9 @@ import userRouter from './routes/user.router.js';
 import postRouter from './routes/post.router.js';
 import scheduleRouter from './routes/schedule.router.js';
 
-// Crea archivo .js para agregar tareas al cron
-fs.appendFile('//home/hanz/Desktop/Social_Hub_2022/test.js', 'console.log("it works");', function (err) {
-    if (err) throw err;
-    console.log('Saved!');}
-);
 
 app.set("port", process.env.PORT || 3001);
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(cors({ credentials: true, origin: 'https://client-production-41d8.up.railway.app/' }));
 app.use(morgan('dev'));
 app.use(express.json());
 
